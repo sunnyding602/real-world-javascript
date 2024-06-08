@@ -1,0 +1,34 @@
+{
+  "name": "app-frontend",
+  "version": "1.0.0",
+  "description": "My fullstack app",
+  "main": "index.js",
+  "type": "module",
+  "license": "AGPL-version-3.0",
+  "private": false,
+  "engines": {
+    "node": ">= 20.0.0",
+    "npm": ">= 10.0.0"
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": "",
+  "keywords": [],
+  "author": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "contributors": [],
+  "scripts": {
+    "dev": "serve -p 3000 ./public",
+    "test": "",
+    "start": "serve -p $PORT ./public"
+  },
+  "dependencies": {
+    "serve": "^14.2.3"
+  }
+}

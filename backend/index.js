@@ -4,7 +4,7 @@ import User from './models/user.js'
 import Tweet from './models/tweet.js'
 
 const app = express()
-const url = 'mongodb+srv://runxi:password@cluster0.stndwtf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+const url = 'mongodb+srv://runxi:Jxiz2gPe0gAq0LUr@cluster0.stndwtf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 
 
 async function main() {
