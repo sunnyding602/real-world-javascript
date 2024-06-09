@@ -26,7 +26,7 @@ export default function Tweet(props) {
                 content: tweetText
             })
         });
-        addTweet({ content: tweetText, userId});
+        addTweet({ content: tweetText, userId :{ _id: userId, username }});
         setTweetText("");
     }
     return (
