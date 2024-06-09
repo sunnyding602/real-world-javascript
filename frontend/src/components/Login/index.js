@@ -44,6 +44,7 @@ export default function Login() {
           <input
             id="password"
             onChange={(e) => handlePasswordOnChange(e)}
+            type="password"
           ></input>
         </div>
         <button type="submit">log in</button>
