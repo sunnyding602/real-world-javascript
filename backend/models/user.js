@@ -6,15 +6,20 @@ const userSchema = new Schema({
         required: true,
         unique: true,
     },
-    email: {
+    password: {
         type: String,
         required: true,
-        unique: true,
     },
-    tweets: [
+    followers: [
         {
             type: Schema.Types.ObjectId,
-            ref: 'Tweet',
+            ref: 'User',
+        },
+    ],
+    following: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'User',
         },
     ],
 })

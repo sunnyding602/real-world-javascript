@@ -1,0 +1,14 @@
+curl -X POST -H "Content-Type: application/json" -d '{"username":"runxi", "password":"123456"}' http://localhost:3000/auth/token
+
+
+curl -X POST -H "Content-Type: application/json" -d '{"username":"runxi", "password":"123456"}' http://localhost:3000/auth/token
+
+curl -H "Authorization: token" http://localhost:3000/tweets/following
+
+
+//create a user
+curl -X POST -H "Content-Type: application/json" -d '{"username":"max", "password":"123456"}' http://localhost:3000/users
+
+
+
+

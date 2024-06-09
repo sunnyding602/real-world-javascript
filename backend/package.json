@@ -10,7 +10,9 @@
   "author": "Greg Sabia Tucker <gtucker@stanford.edu> (http://basepri.me/)",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.3.4",
     "serve": "^14.2.3"
   }
