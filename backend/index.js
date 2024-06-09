@@ -26,7 +26,7 @@ async function main() {
             return
         }
         console.log(user._id);
-        const token = jwt.sign({ userId: user._id }, MY_SECRET_KEY, { expiresIn: '1h' })
+        const token = jwt.sign({ userId: user._id, username}, MY_SECRET_KEY, { expiresIn: '1h' })
         res.send({ token })
     })
 
@@ -45,7 +45,7 @@ async function main() {
         const { content } = req.body
         const tweet = new Tweet({ content, userId: req.userId })
         await tweet.save()
-        res.send(tweet)
+        res.send(tweet.populate('userId'))
     })
 
     // edit a tweet
@@ -59,7 +59,15 @@ async function main() {
         }
         tweet.content = content
         await tweet.save()
+        tweet.populate('userId')
         res.send(tweet)
+    })
+
+    // delete a tweet
+    app.delete('/tweets/:id', verifyToken, async (req, res) => {
+        const tweetId = req.params.id
+        await Tweet.deleteOne({ _id: tweetId, userId: req.userId })
+        res.send("Tweet deleted")
     })
 
     // get a user's all followers
@@ -72,7 +80,8 @@ async function main() {
     // get tweets of a user's following users
     app.get('/tweets/following', verifyToken, async (req, res) => {
         const user = await User.findOne({ _id: req.userId });
-        const tweets = await Tweet.find({ userId: user.following })
+        user.following.push(req.userId)
+        const tweets = await Tweet.find({ userId: user.following }).populate('userId')
         res.send(tweets)
     })
 

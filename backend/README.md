@@ -3,4 +3,6 @@
 #### Install instructions
 ```bash
 npm install
+npm start
 ```
+This backend will use port 3000
