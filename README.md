@@ -21,6 +21,7 @@ sunny is following runxi
 
 Backend is using express, jwt, mongodb. Frontend is a react app.
 
-![image](https://github.com/sunnyding602/real-world-javascript/assets/2386727/1f6a96ad-fd34-4caa-b557-275d994b9fe8)
+![image](https://github.com/sunnyding602/real-world-javascript/assets/2386727/662e462e-23b4-4a42-8933-fbfd8b5858af)
+
 
 ![image](https://github.com/sunnyding602/real-world-javascript/assets/2386727/e914ca7d-6e2d-4630-9fd9-1a44533dadad)
