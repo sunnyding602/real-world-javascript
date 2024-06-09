@@ -29,6 +29,32 @@ export default function Login() {
     new Cookies().set('token', (await loginRes.json()).token, { path: '/' });
     navigate("/home");
   };
+  const handleUserCreation = async () => {
+    const userCreationRes = await fetch("http://localhost:3000/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: userName,
+        password,
+      }),
+    });
+    if (userCreationRes.status === 200) {
+      const loginRes = await fetch("http://localhost:3000/auth/token", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username: userName,
+          password,
+        }),
+      });
+      new Cookies().set('token', (await loginRes.json()).token, { path: '/' });
+      navigate("/home");
+    }
+  }
   return (
     <div>
       <form onSubmit={(e) => handleFormSubmit(e)}>
@@ -48,6 +74,7 @@ export default function Login() {
           ></input>
         </div>
         <button type="submit">log in</button>
+        <button onClick={handleUserCreation}>create</button>
       </form>
     </div>
   );

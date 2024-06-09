@@ -3,6 +3,7 @@
 # Finished features
 
 ### http://localhost:8000/login
+* create a new user
 * login existing users (using jwt):
 username: runxi or max or sunny
 
