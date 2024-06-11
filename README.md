@@ -26,3 +26,5 @@ Backend is using express, jwt, mongodb. Frontend is a react app.
 
 ![image](https://github.com/sunnyding602/real-world-javascript/assets/2386727/e914ca7d-6e2d-4630-9fd9-1a44533dadad)
 
+![image](https://github.com/sunnyding602/real-world-javascript/assets/31556466/6c9593f7-26b1-4165-afdd-c46b9446115d)
+
