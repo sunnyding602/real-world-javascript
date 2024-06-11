@@ -5,7 +5,7 @@
 ### http://localhost:8000/login
 * create a new user
 * login existing users (using jwt):
-username: runxi or max or sunny
+username: runxi or max or sunny or zjustin
 
 password: 123456
 
@@ -25,3 +25,4 @@ Backend is using express, jwt, mongodb. Frontend is a react app.
 
 
 ![image](https://github.com/sunnyding602/real-world-javascript/assets/2386727/e914ca7d-6e2d-4630-9fd9-1a44533dadad)
+
